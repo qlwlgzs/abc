@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>清恋网络工作室 - 技能变现平台</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Microsoft YaHei", sans-serif;
+        }
+        body {
+            background: #121212;
+            color: #fff;
+            min-height: 100vh;
+        }
+        /* 首页入口 */
+        .entry-page {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            gap: 40px;
+            padding: 20px;
+        }
+        .logo {
+            width: 220px;
+            height: auto;
+        }
+        .enter-btn {
+            padding: 14px 36px;
+            background: linear-gradient(135deg, #7cc7ff, #f8a5d1);
+            border: none;
+            border-radius: 50px;
+            color: #121212;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        .enter-btn:hover {
+            transform: scale(1.05);
+        }
+        /* 主内容区 */
+        .main-page {
+            display: none;
+            padding: 40px 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .main-title {
+            font-size: 28px;
+            text-align: center;
+            margin-bottom: 30px;
+            background: linear-gradient(135deg, #7cc7ff, #f8a5d1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .content-box {
+            background: #1e1e1e;
+            border-radius: 16px;
+            padding: 30px;
+            margin-bottom: 20px;
+            line-height: 1.8;
+            font-size: 16px;
+        }
+        .content-box h3 {
+            margin-bottom: 15px;
+            color: #7cc7ff;
+        }
+        .contact-box {
+            text-align: center;
+            padding: 30px;
+            background: #1e1e1e;
+            border-radius: 16px;
+        }
+        .qrcode {
+            width: 160px;
+            height: auto;
+            margin-bottom: 15px;
+        }
+        .qq-text {
+            font-size: 18px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 首页入口 -->
+    <div class="entry-page" id="entryPage">
+        <img src="https://image.58sb.cn/file/img/BocoAzvk.jpg" alt="清恋网络工作室Logo" class="logo">
+        <button class="enter-btn" onclick="enterMain()">进入清恋技能对接</button>
+    </div>
+
+    <!-- 主内容页 -->
+    <div class="main-page" id="mainPage">
+        <h2 class="main-title">让技能变现</h2>
+        
+        <div class="content-box">
+            <h3>平台服务</h3>
+            <p>技能代挂，价格您自己定，平台不强制接单</p>
+            <p>平台也有一些热门技能、例如视频剪辑，ppt代做等，您若有此类技能可直接接单</p>
+            <p>如果您有其他技能，找到我们，我们为您对接客户资源</p>
+            <p>平台资金保障，保障交易安全可靠，避免跑单现象</p>
+            <p>平台严厉监管，避免违法违规等需求流入平台</p>
+        </div>
+
+        <div class="content-box">
+            <h3>入驻要求</h3>
+            <p>年龄不低于16周岁</p>
+            <p>有一项技能在身，且技能必须为合法合规，符合公共良俗的技能</p>
+        </div>
+
+        <div class="content-box">
+            <h3>薪资结算</h3>
+            <p>平台全部采用兼职形式</p>
+            <p>自定义技能可以自己报价，也可以与客户自行商定价格</p>
+            <p>平台采用一单一结方式保证订单质量，一单结束后，客户确认订单结束，平台给予技能者佣金结算</p>
+            <p>平台抽成15%，未来优质接单者若为长期接单合作平台抽成5%</p>
+        </div>
+
+        <div class="contact-box">
+            <img src="https://image.58sb.cn/file/img/rZUWDmMn.jpg" alt="联系方式二维码" class="qrcode">
+            <p class="qq-text">QQ：3524767288</p>
+        </div>
+    </div>
+
+    <script>
+        function enterMain() {
+            document.getElementById("entryPage").style.display = "none";
+            document.getElementById("mainPage").style.display = "block";
+        }
+    </script>
+</body>
+</html>
