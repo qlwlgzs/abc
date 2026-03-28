@@ -87,12 +87,22 @@
             margin-top: 10px;
         }
 
-        /* 新增：下单页面样式 */
-        #orderPage {
-            display: none;
-            padding: 40px 20px;
-            max-width: 800px;
-            margin: 0 auto;
+        /* 新增：返回按钮样式 */
+        .back-btn {
+            padding: 12px 30px;
+            background: #333;
+            border: 1px solid #7cc7ff;
+            border-radius: 50px;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s;
+            margin: 0 auto 20px;
+            display: block;
+        }
+        .back-btn:hover {
+            background: #7cc7ff;
+            color: #121212;
         }
     </style>
 </head>
@@ -101,12 +111,13 @@
     <div class="entry-page" id="entryPage">
         <img src="https://image.58sb.cn/file/img/BocoAzvk.jpg" alt="清恋网络工作室Logo" class="logo">
         <button class="enter-btn" onclick="enterMain()">进入清恋技能对接</button>
-        <!-- 新增：寻找接单者按钮 -->
         <button class="enter-btn" onclick="enterOrder()">寻找接单者</button>
     </div>
 
     <!-- 主内容页 -->
     <div class="main-page" id="mainPage">
+        <!-- 返回按钮 -->
+        <button class="back-btn" onclick="backToHome()">← 返回首页</button>
         <h2 class="main-title">让技能变现</h2>
         
         <div class="content-box">
@@ -138,8 +149,10 @@
         </div>
     </div>
 
-    <!-- 新增：下单对接页面 -->
+    <!-- 下单对接页面 -->
     <div class="main-page" id="orderPage">
+        <!-- 返回按钮 -->
+        <button class="back-btn" onclick="backToHome()">← 返回首页</button>
         <h2 class="main-title">寻找接单者 · 下单对接</h2>
         
         <div class="content-box">
@@ -173,10 +186,16 @@
             document.getElementById("mainPage").style.display = "block";
         }
 
-        // 新增：进入下单页面
         function enterOrder() {
             document.getElementById("entryPage").style.display = "none";
             document.getElementById("orderPage").style.display = "block";
+        }
+
+        // 返回首页函数
+        function backToHome() {
+            document.getElementById("mainPage").style.display = "none";
+            document.getElementById("orderPage").style.display = "none";
+            document.getElementById("entryPage").style.display = "flex";
         }
     </script>
 </body>
