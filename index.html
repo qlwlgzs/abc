@@ -86,6 +86,14 @@
             font-size: 18px;
             margin-top: 10px;
         }
+
+        /* 新增：下单页面样式 */
+        #orderPage {
+            display: none;
+            padding: 40px 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
     </style>
 </head>
 <body>
@@ -93,6 +101,7 @@
     <div class="entry-page" id="entryPage">
         <img src="https://image.58sb.cn/file/img/BocoAzvk.jpg" alt="清恋网络工作室Logo" class="logo">
         <button class="enter-btn" onclick="enterMain()">进入清恋技能对接</button>
+        <!-- 新增：寻找接单者按钮 -->
         <button class="enter-btn" onclick="enterOrder()">寻找接单者</button>
     </div>
 
@@ -123,34 +132,35 @@
             <p>平台抽成15%，未来优质接单者若为长期接单合作平台抽成5%</p>
         </div>
 
-        <!-- 寻找接单者页面 -->
-<div class="main-page" id="orderPage">
-    <h2 class="main-title">寻找接单者 · 下单对接</h2>
-    
-    <div class="content-box">
-        <h3>下单方向</h3>
-        <p>1.接单主页可以（商家自己报价）筛选有没有适合自己的订单，有的话可以直接下单，觉得有一些细节或者价格，联系客服我们会拉您，商家和我们的平台客服监管（保障订单质量）</p>
-        <p>2.如果没有适合自己的，联系我们，把需求和预算告诉我们，我们为您对接接单资源</p>
+        <div class="contact-box">
+            <img src="https://image.58sb.cn/file/img/rZUWDmMn.jpg" alt="联系方式二维码" class="qrcode">
+            <p class="qq-text">QQ：3524767288</p>
+        </div>
     </div>
 
-    <div class="content-box">
-        <h3>下单方式</h3>
-        <p>由于平台初步启动状态为了保障您的订单质量与您的消费权益，我们采用一对一服务付款，您确定好好后可以联系我们，我们为您对接资源</p>
-    </div>
+    <!-- 新增：下单对接页面 -->
+    <div class="main-page" id="orderPage">
+        <h2 class="main-title">寻找接单者 · 下单对接</h2>
+        
+        <div class="content-box">
+            <h3>下单方向</h3>
+            <p>1.接单主页可以（商家自己报价）筛选有没有适合自己的订单，有的话可以直接下单，觉得有一些细节或者价格，联系客服我们会拉您，商家和我们的平台客服监管（保障订单质量）</p>
+            <p>2.如果没有适合自己的，联系我们，把需求和预算告诉我们，我们为您对接接单资源</p>
+        </div>
 
-    <div class="content-box">
-        <h3>注意事项</h3>
-        <p>1.首先我们致力于打造绿色合法合规的技能对接，若您的需求存在违法违规等行为我们很抱歉不能对接您的需求</p>
-        <p>2.付款前确认好您的基础需求，付款一定要付款给平台，不要直接付款给商家，这样可以保障您的消费权益</p>
-        <p>3.订单服务途中您可在您专属群聊中与商家沟通（群内有您，商家，平台客服监管），若订单产生分歧与纠纷，请及时联系平台客服，平台核实过后会给您补偿或者退款</p>
-        <p>4.您确认服务结束后视为订单结束，请确认好订单质量，当然平台为了保障您的消费权益，设立了订单追溯期，订单追溯为12小时，在您确定订单结束后12小时内若对订单产生疑问请及时在订单结束后的12小时内即是联系平台客服给您解决</p>
-    </div>
+        <div class="content-box">
+            <h3>下单方式</h3>
+            <p>由于平台初步启动状态为了保障您的订单质量与您的消费权益，我们采用一对一服务付款，您确定好好后可以联系我们，我们为您对接资源</p>
+        </div>
 
-    <div class="contact-box">
-        <img src="https://image.58sb.cn/file/img/rZUWDmMn.jpg" alt="联系方式二维码" class="qrcode">
-        <p class="qq-text">QQ：3524767288</p>
-    </div>
-</div>
+        <div class="content-box">
+            <h3>注意事项</h3>
+            <p>1.首先我们致力于打造绿色合法合规的技能对接，若您的需求存在违法违规等行为我们很抱歉不能对接您的需求</p>
+            <p>2.付款前确认好您的基础需求，付款一定要付款给平台，不要直接付款给商家，这样可以保障您的消费权益</p>
+            <p>3.订单服务途中您可在您专属群聊中与商家沟通（群内有您，商家，平台客服监管），若订单产生分歧与纠纷，请及时联系平台客服，平台核实过后会给您补偿或者退款</p>
+            <p>4.您确认服务结束后视为订单结束，请确认好订单质量，当然平台为了保障您的消费权益，设立了订单追溯期，订单追溯为12小时，在您确定订单结束后12小时内若对订单产生疑问请及时在订单结束后的12小时内即是联系平台客服给您解决</p>
+        </div>
+
         <div class="contact-box">
             <img src="https://image.58sb.cn/file/img/rZUWDmMn.jpg" alt="联系方式二维码" class="qrcode">
             <p class="qq-text">QQ：3524767288</p>
@@ -162,10 +172,12 @@
             document.getElementById("entryPage").style.display = "none";
             document.getElementById("mainPage").style.display = "block";
         }
+
+        // 新增：进入下单页面
         function enterOrder() {
-    document.getElementById("entryPage").style.display = "none";
-    document.getElementById("orderPage").style.display = "block";
-}
+            document.getElementById("entryPage").style.display = "none";
+            document.getElementById("orderPage").style.display = "block";
+        }
     </script>
 </body>
 </html>
